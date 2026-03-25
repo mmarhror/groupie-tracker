@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Groupie Tracker</title>
+    <link rel="stylesheet" href="/template/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="artists-container">
+      {{range .}}
+      <a href="#artist{{.Id}}">
+        <div class="card">
+          <img src="{{.Image}}" />
+          <label class="name">{{.Name}}</label>
+        </div>
+      </a>
+      {{end}}
+    </div>
+    {{range .}}
+    <div id="artist{{.Id}}" class="infos-page">
+      <div class="infos-container">
+        <a href="#">
+          <img class="icon" src="/media/undo.png" />
+        </a>
+        <div class="main">
+          <img class="artist-img" src="{{.Image}}" />
+          <div>
+            <h1>{{.Name}}</h1>
+            <h2>Creation Date: {{.CreationDate}}</h2>
+            <h2>First Album: {{.FirstAlbum}}</h2>
+          </div>
+        </div>
+
+        <div class="label">
+          <h3>MEMBERS</h3>
+        </div>
+        <ul class="members">
+          {{range .Members}}
+          <li>{{.}}</li>
+          {{end}}
+        </ul>
+        <div class="label">
+          <h3>CONCERTS</h3>
+        </div>
+        <div class="concerts">
+          {{range $location, $dates := .DatesLocations}}
+          <div class="dateslocation">
+            <span>{{$location}}:</span>
+            {{range $date := $dates}}
+            <span>{{$date}}</span>
+            {{end}}
+          </div>
+          {{end}}
+        </div>
+
+        <div class="label">
+          <h3>LOCATIONS</h3>
+        </div>
+        <ul class="members">
+          {{range .Locations}}
+          <li>{{.}}</li>
+          {{end}}
+        </ul>
+
+        <div class="label">
+          <h3>DATES</h3>
+        </div>
+        <ul class="members">
+          {{range .Dates}}
+          <li>{{.}}</li>
+          {{end}}
+        </ul>
+      </div>
+    </div>
+    {{end}}
+  </body>
+</html>
