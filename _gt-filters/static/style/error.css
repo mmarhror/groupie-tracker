@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #121212;
+    font-family: Arial, sans-serif;
+}
+
+/* =============================== Error Page =============================== */
+.errorSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.statusCode {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #F04546;
+    font-size: 7rem;
+    margin: 0;
+}
+
+.errorText {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.btnBack {
+    border: solid 1px #1db954;
+    text-decoration: none;
+    color: #1db954;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.btnBack:hover{
+    background-color: #1db954;
+    color: #fff;
+}

@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #121212;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.mainSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0px;
+}
+
+.artistInfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.imgArtist {
+  border-radius: 50%;
+}
+
+.artistName {
+  background-color: #1db954;
+  padding: 10px 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.moreDetails {
+  display: flex;
+  font-size: 15px;
+  padding: 0px 10px;
+  color: #1db954;
+  border-radius: 10px;
+}
+
+.moreDetails p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.mambersSection,
+.locationsSection,
+.datesSection,
+.relationsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.mambersSection div,
+.locationsSection div,
+.datesSection div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mambersSection p,
+.locationsSection p,
+.datesSection p {
+  background-color: #1e1e1e;
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+
+
+
+
+.relation-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+.relation-card {
+  background-color: #1e1e1e;
+  border-left: 4px solid #1db954;
+  padding: 15px 20px;
+  width: 200px;
+  border-radius: 8px
+}
+
+.relation-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.relation-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.relation-card ul li {
+  font-size: 14px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.gridInfo {
+  width: 70vw;
+}
+
+.title {
+  color: #1db954;
+  font-size: 25px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 6px -4px #1db954;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu a h1 {
+  font-size: 2rem;
+  color: #1db954;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu ul li {
+  display: inline;
+  font-size: 20px;
+}
+
+.menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.menu ul li a:hover {
+  color: #1db954;
+}
+
+.btnBack {
+    border: solid 1px #1db954;
+    text-decoration: none;
+    color: #1db954;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.backToHome {
+  margin-top: 40px;
+}
+
+.btnBack:hover{
+    background-color: #1db954;
+    color: #fff;
+}
+
+/* ============================ Responsive Desiogn ============================ */
+@media (max-width: 900px) {
+  .menu h1 {
+    font-size: 1.8rem;
+  }
+
+  .menu ul {
+    gap: 15px;
+  }
+
+  .menu ul li {
+    display: inline;
+    font-size: 19px;
+  }
+
+  .artistInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gridInfo {
+    width: 80vw;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .menu h1 {
+    font-size: 1.5rem;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu ul li {
+    display: inline;
+    font-size: 18px;
+  }
+
+  .artistInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .artistInfo div {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .gridInfo {
+    width: 90vw;
+  }
+
+  .artistName {
+    max-width: 80vw;
+
+  }
+
+  .moreDetails {
+    display: flex;
+    font-size: 15px;
+    padding: 0px 10px;
+    color: #1db954;
+    border-radius: 10px;
+  }
+
+  .moreDetails p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+  }
+
+  .mainSection {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0px;
+  }
+
+  .artistInfo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+

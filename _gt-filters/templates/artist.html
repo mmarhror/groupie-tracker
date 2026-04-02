@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style/details.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Detsils</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <a href="/">
+            <h1>Groupie Tracker</h1>
+        </a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="mainSection">
+        <!-- From Artist -->
+        <div class="artistInfo">
+            <img src="{{ .Image }}" alt="Artist Image" loading="lazy" class="imgArtist">
+            <div>
+                <h1 class="artistName">{{ .Name }}</h1>
+                <div class="moreDetails">
+                    <p class="dateCreation">Creation Date : {{ .CreationDate }}</p>
+                    <p> • </p>
+                    <p>First Album : {{ .FirstAlbum }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="gridInfo">
+            <div class="mambersSection">
+                <h2 class="title">Members</h2>
+                <div>
+                    {{ range .Members }}
+                    <p>{{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            <!-- end -->
+            <!-- From Locations -->
+            <div class="locationsSection">
+                <h2 class="title">Locations:</h2>
+                <div>
+                    {{ range .Locations }}
+                    <p> {{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            <!-- end -->
+            <!-- From Dates -->
+            <div class="datesSection">
+                <h2 class="title">Dates:</h2>
+                <div>
+                    {{ range .Dates }}
+                    <p> {{ . }}</p>
+                    {{ end }}
+                </div>
+            </div>
+            <!-- end -->
+            <!-- From Relations -->
+            <div class="relationsSection">
+                <h2 class="title">Relations:</h2>
+                <div class="relation-grid ">
+                    {{ range $key, $value := .DatesLocations }}
+                    <div class="relation-card">
+                        <h3> {{ $key }}</h3>
+                        <ul>
+                            {{ range $value }}
+                            <li class="dates">{{ . }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="backToHome">
+            <a href="/" class="btnBack">Go to Homepage</a>
+        </div>
+        <!-- end -->
+    </section>
+</body>
+
+</html>

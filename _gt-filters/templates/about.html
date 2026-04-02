@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" href="/static/style/about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="menu">
+        <a href="/">
+            <h1>Groupie Tracker</h1>
+        </a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="mainSection">
+        <div class="container">
+            <div>
+                <h1>Project Overview</h1>
+                <p>Groupie Tracker is a web application that consumes an API containing information about bands and artists.
+                    The app displays this data through various visualizations such as cards, tables, lists, and charts.</p>
+            </div>
+            <div>
+                <h1>API Structure</h1>
+                <h3>The API is divided into four parts:</h3>
+                <ul>
+                    <li><span>artists: </span>Contains details about bands and artists including their names, images,
+                        starting year,
+                        first album date, and members.</li>
+                    <li><span>locations: </span>Includes last and upcoming concert locations.</li>
+                    <li><span>dates: </span>Contains last and upcoming concert dates.</li>
+                    <li><span>relation: </span>Links the artists, dates, and locations data.</li>
+                </ul>
+            </div>
+            <div>
+                <h1>Features</h1>
+                <ul>
+                    <li>Fetches and displays data from the API with different visualization formats.</li>
+                    <li>Implements event-driven client-server communication for dynamic data updates.</li>
+                    <li>Handles errors to ensure stable operation of the website and server.</li>
+                    <li>Backend developed in Go using only standard packages.</li>
+                    <li>Includes unit tests for functionality verification.</li>
+                </ul>
+            </div>
+            <div>
+                <h1>Technologies Used</h1>
+                <ul>
+                    <li><span>Go</span> (standard library)</li>
+                    <li><span>HTML</span>, <span>CSS</span> (for frontend)</li>
+                </ul>
+            </div>
+            <div>
+                <h1>Usage</h1>
+                <p>This project demonstrates data manipulation, JSON handling, client-server interaction, and event
+                    visualization in a full-stack web application.</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
